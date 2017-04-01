@@ -2,8 +2,8 @@ require 'byebug'
 
 class PolyTreeNode
   attr_reader :value
-  def initialize(value)
-    @value, @parent, @children = value, nil, []
+  def initialize(value, parent = nil)
+    @value, @parent, @children = value, parent, []
   end
 
   def parent
